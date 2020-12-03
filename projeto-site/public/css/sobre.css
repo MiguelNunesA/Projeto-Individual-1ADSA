@@ -74,7 +74,7 @@ a:hover {
 /* END NAVBAR */
 /* HISTORIA */
 .historia {
-    height: 770px;
+    height: 970px;
     /* background-color: rgb(43, 45, 68); */
     text-align: center;
 }
@@ -85,7 +85,7 @@ a:hover {
     padding-left: 2%;
     /* display: flex; */
     width: 96%;
-    height: 750px;
+    height: 970px;
     font-size: 17px;
     background-color: rgba(54, 50, 63, 0.534);
     /* border-radius: 10px; */
