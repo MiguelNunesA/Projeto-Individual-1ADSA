@@ -30,7 +30,7 @@
                 <b>
                 <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><i class="fas fa-book"></i> Sobre</li>
-                <li>Olá, <b id="b_usuario" onclick="transformar()"></b></li>
+                <li>Olá, <b id="b_usuario"></b></li>
                 <li><button class="btn" onclick="logoff()">Sair</button></li>
                 </b>
             </ul>
@@ -112,6 +112,7 @@
                     <b>Individualidade:</b> Engine, A Individualidade de Tenya se manisfesta em forma de motores em suas panturrilhas, dando-lhe super velocidade. <br>
                     <b>Valores:</b> Honestidade e ambição. <br>
                     <b>Classe:</b> 1-A do Colégio U.A.
+                    <span id="span_frase_lida" style="display: none;">Não gosta que as coisas que não sigam um padrão.</span>
                 </span>
             </div>
         </div>       
@@ -130,43 +131,43 @@
 </body>
 </html>
 <script>
-    function transformar (){
-        var nome_usuario = b_usuario.value;
-
-        var posicao_palavra_izuku = nome_usuario.indexOf('Izuku');
-        var posicao_palavra_midoriya = nome_usuario.indexOf('Midoriya');
-        var posicao_palavra_deku = nome_usuario.indexOf('Deku');
-        if(posicao_palavra_izuku >= 0 || posicao_palavra_midoriya >= 0 || posicao_palavra_deku >= 0) {
-            easter_eggs.scr = './img/secretDeku.jpg'
-        }      
-    }
+    var numero_clique = '';
 
     function modificar_allmight(){
-        span_allmight.style.color = 'yellow'
+        span_allmight.style.color = 'yellow';
+        numero_clique ++;
     }
 
     function modificar_izuku(){
-        span_izuku.style.color = 'green'
+        span_izuku.style.color = 'green';
+        numero_clique ++;
     }
 
     function modificar_bakugou(){
-        span_bakugou.style.color = 'red'
+        span_bakugou.style.color = 'red';
+        numero_clique ++;
     }
 
     function modificar_todoroki(){
-        span_todoroki.style.color = 'royalblue'
+        span_todoroki.style.color = 'royalblue';
+        numero_clique ++;
     }
 
     function modificar_ochaco(){
-        span_ochaco.style.color = 'pink'
+        span_ochaco.style.color = 'pink';
+        numero_clique ++;
     }
 
     function modificar_lida(){
-        span_allmight.style.color = 'white'
-        span_izuku.style.color = 'white'
-        span_bakugou.style.color = 'white'
-        span_todoroki.style.color = 'white'
-        span_ochaco.style.color = 'white'
-    }
+        span_allmight.style.color = 'white';
+        span_izuku.style.color = 'white';
+        span_bakugou.style.color = 'white';
+        span_todoroki.style.color = 'white';
+        span_ochaco.style.color = 'white';
+        
+        if(numero_clique >= 10){
+            span_frase_lida.style.display = 'block'
+        }
+    }       
 </script>
     
