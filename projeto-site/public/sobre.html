@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+
+    <link rel="stylesheet" href="./css/sobre.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="imagem/png" href="./img/logo1.png">
+    <script type="text/javascript" src="funcoes.js"></script>
+</head>
+<script>
+
+    let usuario;
+
+    verificar_autenticacao();
+
+    
+</script>
+<body onload="verificar_autenticacao()">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="container">
+        <div><a href="./index.html"><img src="./img/logo.png"></a></div>
+
+            <ul>
+                <b>
+                <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><i class="fas fa-book"></i> Sobre</li>
+                <li>Olá, <b id="b_usuario"></b></li>
+                <li><button class="btn" onclick="logoff()">Sair</button></li>
+                </b>
+            </ul>
+    </div>
+</div>
+<!-- END NAVBAR -->
+<!-- HISTORIA -->
+<div class="historia">
+    <div class="container">         
+        <div class="box_historia">          
+            <img src="./img/historia-banner.jpg">              
+            <p><h1>Um pouco da história</h1> 
+                My Hero Academia(ou Boku no Hero) conta sobre um jovem chamado Izuku 'Deku' Midoriya, vive em mundo onde 80% da população manifesta pelo menos uma Individualidade(algum tipo de poder que na maioria das vezes é uma derivação dos poderes dos pais da pessoa) até o fim da infância caso isso não aconteça a pessoa não desenvolve nenhuma Individualidade. 
+            </p>
+            <p>
+                Com o aparecimento desses poderes o mundo se tornou um lugar mais bagunçado onde muitos ultilizam seu poderes para cometer crimes e é ai que entram nossos heróis, que são pessoas que dedicam suas vidas e suas individualidades para defender os que não possuem poderes e os que as individualidade não foram feitas para lutar ou se defender.
+            </p> 
+            <p> 
+                O nosso protagonista possui o sonho de virar o Herói nº1, titúlo dado ao herói mais forte do seu país, mas ele descobre que faz parte de 20% da população que não possui Individualidade, o que faz pensar em desistir de seu sonho de ser herói, até que um encontro inesperado muda seu destino, e ele consegue entrar para a melhor colégio de formação de herós a U.A., e apartir dai começa a história do nosso protagonista e seus amigos sobre as dificuldades que enfretam para se tornarem herós reconhecidos e que sejam capazes de ajudar os mais fracos. O anime possui 4 temporadas já lançadas com a 5º temporada já anunciada para janeiro de 2021 e 2 filmes já lançados, que contam sobre os desafios enfrentados por Midoriya e seus amigos.
+            </p>
+        </div>        
+    </div>
+</div>
+<!-- END HISTORIA -->
+<!-- PERSONAGEM -->
+<div class="item_personagens">
+    <div class="container">
+        <div class="box_personagem">
+            <h1>Principais personagens</h1>
+            <div>
+                <img src="./img/AllMight.png">
+                <span><h2>Toshinori Yagi (All Might)</h2>
+                    All Might, o 'Símbolo da Paz', foi reconhecido assim por ser o héroi mais forte de todos. Sempre exibindo seu sorriso, All Might geralmente mostra uma atitude brilhante, antipática e na qual dá a entender que pode fazer de tudo inspirando os outros desta forma. Ele tende a ser bastante amigável e simpático, devido à sua popularidade e os anos como uma grande celebridade.<br>
+                    <b>Individualidade:</b> One for All, aumenta as habilidades físicas do portador quando ativa. <br>
+                    <b>Valores:</b> Justiça e resiliência. <br>
+                    
+                </span>
+            </div>
+            <div>
+                <img src="./img/Deku.png">
+                <span><h2>Izuku Midoriya</h2>
+                    Embora tenha nascido sem individualidade, Izuku conseguiu chamar a atenção do lendário herói All Might devido ao seu heroísmo inato e sua personalidade amigável, desde então, tornou-se seu aprendiz mais próximo, bem como um aluno da Classe 1-A do Colégio U.A.. All Might passou sua Individualidade para Izuku, fazendo dele o nono portador do One For All. <br>
+                    <b>Individualidade:</b> One for All, aumenta as habilidades físicas do portador quando ativa. <br>
+                    <b>Valores:</b> Ambição, resiliência e honestidade. <br>
+                    <b>Classe:</b> 1-A do Colégio U.A.
+                </span>
+            </div>
+            <div>
+                <img src="./img/Bakugou.png">
+                <span><h2>Katsuki Bakugo</h2>
+                    Katsuki possui uma personalida violenta e com tendências agresivas, mesmo assim seu objetivo é se tornar o herói nº1 assim como Izuku Midoriya, embora não seja o herói ideal, por possuir uma personagens fora dos padrões de um herói, por muito é considerado um gênio já que sabe usar sua Individualidade com habilidade e inteligência, ficando sempre com notas muito boas, em seus testes.<br>
+                    <b>Individualidade:</b> Explosão, permite que o indivíduo sue nitroglicerina da palma de suas mãos, o que cria explosões. <br>
+                    <b>Valores:</b> Ambição, gânancia e orgulho. <br>
+                    <b>Classe:</b> 1-A do Colégio U.A.
+                </span>
+            </div>
+            <div>
+                <img src="./img/Todoroky.png">
+                <span><h2>Shoto Todoroki</h2>
+                    Todoroki tem uma personalidade fria e distante, decorrente a educação áspera que recebeu. Ele é bastante imutável durante suas batalhas, podendo ficar calmo mesmo enquanto luta contra vilões. Embora seja bruto em batalha, está bem ciente da ética do heroísmo, apenas desejando subjugar seus adversários.  <br>
+                    <b>Individualidade:</b> Half-Cold Half-Hot, permite que ele congele tudo com seu lado direito e queime tudo do seu lado esquerdo.<br>
+                    <b>Valores:</b> Orgulho e ambição. <br>
+                    <b>Classe:</b> 1-A do Colégio U.A.
+                </span>
+            </div>
+            <div>
+                <img src="./img/Ochako.png">
+                <span><h2>Ochaco Uraraka</h2>
+                    Ochaco é uma pessoa brilhante e animada que sempre tem pensamentos positivos, ainda que seja objetiva o suficiente para enxergar falhas e/ou virtudes em algo ou alguém, percebendo suas diferenças, mas respeitando eles pensando que tudo e todos se complementam. <br>
+                    <b>Individualidade:</b> Zero Gravity, permite à Ochaco remover os efeitos da gravidade de coisas sólidas ao tocá-las. <br>
+                    <b>Valores:</b> Honestidade e positividade. <br>
+                    <b>Classe:</b> 1-A do Colégio U.A.
+                </span>
+            </div>
+            <div>
+                <img src="./img/Lida.png">
+                <span><h2>Izuku Midoriya</h2>
+                    Tenya pode parecer severo, mas na verdade ele é uma pessoa muito direta, sincera, inteligente e nobre. Ele tende a levar tudo muito a sério, e por causa disso, ele tem o hábito de tirar conclusões precipitadas, depois falar com entusiasmo ou agir com base em tais conclusões.  <br>
+                    <b>Individualidade:</b> Engine, A Individualidade de Tenya se manisfesta em forma de motores em suas panturrilhas, dando-lhe super velocidade. <br>
+                    <b>Valores:</b> Honestidade e ambição. <br>
+                    <b>Classe:</b> 1-A do Colégio U.A.
+                </span>
+            </div>
+        </div>       
+    </div>
+</div>  
+<!-- END PERSONAGEM -->
+
+
+<!-- FOTTER -->
+<div class="footer">
+    <div class="container">
+        <h2>Feito por Miguel <i class="fas fa-laugh-beam"></i> &COPY; 2020</h2>
+    </div>
+</div>
+<!-- END FOTTER -->   
+</body>
+</html>
+    

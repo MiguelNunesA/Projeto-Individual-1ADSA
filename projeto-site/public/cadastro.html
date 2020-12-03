@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hero Academia</title>
+    <link rel="stylesheet" href="./css/login_cadastro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="imagem/png" href="./img/logo1.png">
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="container">
+        <div><a href="./index.html"><img src="./img/logo.png"></a></div>
+        <ul>
+            <b>
+            <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li> <a href="./sobre.html"><i class="fas fa-book"></i> Sobre</a></li>
+            <li><i class="fas fa-user"></i></i> Cadastro</li>
+            <li><a href="./login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </b>
+        </ul>
+    </div>
+</div>
+<!-- END NAVBAR -->
+<!-- CADASTRO -->
+<div class="formulario">
+    <div class="container">
+        <div class="cadastro">
+            <div class="campo_formulario">
+                <h1>Cadastre-se</h1> <br>
+
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
+                    <span>Nome e sobrenome</span><br>
+
+                        <input type="text" name="nome" id="in_nome" class="in_form" autofocus="autofocus" placeholder="Nome completo"> <br>
+
+                    <span>Usuário</span><br>
+
+                        <input type="text" name="login" id="in_login" class="in_form" placeholder="Usuário para login"> <br>
+
+                    <span>Senha</span> <br>
+
+                        <input type="password" name="senha" id="in_senha" class="in_form" placeholder="**********"> <br>
+                        
+                        <i id="i_msg_erro"></i> <br>
+
+                        <b>Já possui login? <a href="./login.html">Acesse aqui.</a></b> <br><br>
+
+                    <input type="submit" id="btn_entrar" value="Cadastrar" class="btn"> <br>
+                </form>
+            </div>
+            
+            <div id="div_msg_erro" style="color: red; display: none;">
+                Erro ao tentar cadastrar
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CADASTRO -->
+<!-- FOTTER -->
+<div class="footer">
+    <div class="container">
+        <h2>Feito por Miguel <i class="fas fa-laugh-beam"></i> &COPY; 2020</h2>
+    </div>
+</div>
+<!-- END FOTTER -->
+
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_msg_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;     
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        div_msg_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        div_msg_erro.style.display='block';
+    }
+
+</script>
