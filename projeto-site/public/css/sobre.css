@@ -142,14 +142,9 @@ h1{
 .box_personagem b {
     color: black;
 }
-/* .ajuste_img {
-    height: 590px;
-    width: 200px;
-} */
-/* .ajuste_img1 {
-    width: 300px;
-    height: 500px;
-} */
+.box_personagem img {
+    cursor: pointer;
+}
 /* END PERSONAGENS */
 /* FOOTER */
 .footer {

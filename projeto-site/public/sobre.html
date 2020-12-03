@@ -16,7 +16,7 @@
     let usuario;
 
     verificar_autenticacao();
-
+    
     
 </script>
 <body onload="verificar_autenticacao()">
@@ -30,7 +30,7 @@
                 <b>
                 <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><i class="fas fa-book"></i> Sobre</li>
-                <li>Olá, <b id="b_usuario"></b></li>
+                <li>Olá, <b id="b_usuario" onclick="transformar()"></b></li>
                 <li><button class="btn" onclick="logoff()">Sair</button></li>
                 </b>
             </ul>
@@ -61,8 +61,8 @@
         <div class="box_personagem">
             <h1>Principais personagens</h1>
             <div>
-                <img src="./img/AllMight.png">
-                <span><h2>Toshinori Yagi (All Might)</h2>
+                <img onclick="modificar_allmight()" src="./img/AllMight.png">
+                <span id="span_allmight"><h2>Toshinori Yagi (All Might)</h2>
                     All Might, o 'Símbolo da Paz', foi reconhecido assim por ser o héroi mais forte de todos. Sempre exibindo seu sorriso, All Might geralmente mostra uma atitude brilhante, antipática e na qual dá a entender que pode fazer de tudo inspirando os outros desta forma. Ele tende a ser bastante amigável e simpático, devido à sua popularidade e os anos como uma grande celebridade.<br>
                     <b>Individualidade:</b> One for All, aumenta as habilidades físicas do portador quando ativa. <br>
                     <b>Valores:</b> Justiça e resiliência. <br>
@@ -70,17 +70,17 @@
                 </span>
             </div>
             <div>
-                <img src="./img/Deku.png">
-                <span><h2>Izuku Midoriya</h2>
+                <img onclick="modificar_izuku()" id="easter_egg" src="./img/Deku.png">
+                <span id="span_izuku"><h2>Izuku Midoriya</h2>
                     Embora tenha nascido sem individualidade, Izuku conseguiu chamar a atenção do lendário herói All Might devido ao seu heroísmo inato e sua personalidade amigável, desde então, tornou-se seu aprendiz mais próximo, bem como um aluno da Classe 1-A do Colégio U.A.. All Might passou sua Individualidade para Izuku, fazendo dele o nono portador do One For All. <br>
                     <b>Individualidade:</b> One for All, aumenta as habilidades físicas do portador quando ativa. <br>
-                    <b>Valores:</b> Ambição, resiliência e honestidade. <br>
+                    <b>Valores:</b> Ambição, resiliência, honestidade e lealdade. <br>
                     <b>Classe:</b> 1-A do Colégio U.A.
                 </span>
             </div>
             <div>
-                <img src="./img/Bakugou.png">
-                <span><h2>Katsuki Bakugo</h2>
+                <img onclick="modificar_bakugou()" src="./img/Bakugou.png">
+                <span id="span_bakugou"><h2>Katsuki Bakugo</h2>
                     Katsuki possui uma personalida violenta e com tendências agresivas, mesmo assim seu objetivo é se tornar o herói nº1 assim como Izuku Midoriya, embora não seja o herói ideal, por possuir uma personagens fora dos padrões de um herói, por muito é considerado um gênio já que sabe usar sua Individualidade com habilidade e inteligência, ficando sempre com notas muito boas, em seus testes.<br>
                     <b>Individualidade:</b> Explosão, permite que o indivíduo sue nitroglicerina da palma de suas mãos, o que cria explosões. <br>
                     <b>Valores:</b> Ambição, gânancia e orgulho. <br>
@@ -88,8 +88,8 @@
                 </span>
             </div>
             <div>
-                <img src="./img/Todoroky.png">
-                <span><h2>Shoto Todoroki</h2>
+                <img onclick="modificar_todoroki()" src="./img/Todoroky.png">
+                <span id="span_todoroki"><h2>Shoto Todoroki</h2>
                     Todoroki tem uma personalidade fria e distante, decorrente a educação áspera que recebeu. Ele é bastante imutável durante suas batalhas, podendo ficar calmo mesmo enquanto luta contra vilões. Embora seja bruto em batalha, está bem ciente da ética do heroísmo, apenas desejando subjugar seus adversários.  <br>
                     <b>Individualidade:</b> Half-Cold Half-Hot, permite que ele congele tudo com seu lado direito e queime tudo do seu lado esquerdo.<br>
                     <b>Valores:</b> Orgulho e ambição. <br>
@@ -97,17 +97,17 @@
                 </span>
             </div>
             <div>
-                <img src="./img/Ochako.png">
-                <span><h2>Ochaco Uraraka</h2>
+                <img onclick="modificar_ochaco()" src="./img/Ochako.png">
+                <span id="span_ochaco"><h2>Ochaco Uraraka</h2>
                     Ochaco é uma pessoa brilhante e animada que sempre tem pensamentos positivos, ainda que seja objetiva o suficiente para enxergar falhas e/ou virtudes em algo ou alguém, percebendo suas diferenças, mas respeitando eles pensando que tudo e todos se complementam. <br>
                     <b>Individualidade:</b> Zero Gravity, permite à Ochaco remover os efeitos da gravidade de coisas sólidas ao tocá-las. <br>
-                    <b>Valores:</b> Honestidade e positividade. <br>
+                    <b>Valores:</b> Honestidade, positividade e lealdade. <br>
                     <b>Classe:</b> 1-A do Colégio U.A.
                 </span>
             </div>
             <div>
-                <img src="./img/Lida.png">
-                <span><h2>Izuku Midoriya</h2>
+                <img onclick="modificar_lida()" src="./img/Lida.png">
+                <span id="span_lida"><h2>Tenya Iida</h2>
                     Tenya pode parecer severo, mas na verdade ele é uma pessoa muito direta, sincera, inteligente e nobre. Ele tende a levar tudo muito a sério, e por causa disso, ele tem o hábito de tirar conclusões precipitadas, depois falar com entusiasmo ou agir com base em tais conclusões.  <br>
                     <b>Individualidade:</b> Engine, A Individualidade de Tenya se manisfesta em forma de motores em suas panturrilhas, dando-lhe super velocidade. <br>
                     <b>Valores:</b> Honestidade e ambição. <br>
@@ -129,4 +129,44 @@
 <!-- END FOTTER -->   
 </body>
 </html>
+<script>
+    function transformar (){
+        var nome_usuario = b_usuario.value;
+
+        var posicao_palavra_izuku = nome_usuario.indexOf('Izuku');
+        var posicao_palavra_midoriya = nome_usuario.indexOf('Midoriya');
+        var posicao_palavra_deku = nome_usuario.indexOf('Deku');
+        if(posicao_palavra_izuku >= 0 || posicao_palavra_midoriya >= 0 || posicao_palavra_deku >= 0) {
+            easter_eggs.scr = './img/secretDeku.jpg'
+        }      
+    }
+
+    function modificar_allmight(){
+        span_allmight.style.color = 'yellow'
+    }
+
+    function modificar_izuku(){
+        span_izuku.style.color = 'green'
+    }
+
+    function modificar_bakugou(){
+        span_bakugou.style.color = 'red'
+    }
+
+    function modificar_todoroki(){
+        span_todoroki.style.color = 'royalblue'
+    }
+
+    function modificar_ochaco(){
+        span_ochaco.style.color = 'pink'
+    }
+
+    function modificar_lida(){
+        span_allmight.style.color = 'white'
+        span_izuku.style.color = 'white'
+        span_bakugou.style.color = 'white'
+        span_todoroki.style.color = 'white'
+        span_ochaco.style.color = 'white'
+    }
+</script>
     
