@@ -1,0 +1,168 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* NAVBAR */
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.container {
+    /* height: 100px; */
+    width: 90%;
+    margin: auto;
+}
+
+a:hover {
+    font-weight: 900;
+    color: gray;
+}
+.navbar {
+    height: 90px;  
+    background-color: black;
+}
+
+.navbar .container div{
+    float: left;
+    margin-top: 10px;
+}
+
+.navbar img {
+    width: 150px;
+}
+
+.navbar ul {
+    float: right;
+}
+
+.navbar li{
+    font-weight: 500;
+    font-size: 20px;
+    float: left;
+    list-style: none;
+    margin-left: 70px;
+    margin-top: 15px;
+    color: rgb(249, 250, 249);
+}
+/* END NAVBAR */
+
+
+/* BANNER */
+.banner {
+    height: 700px;
+    background-image: url(../img/bannerHOME.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #d1d3f8;
+}
+
+.banner .frase_banner {
+    text-align: center;
+    color: white;
+}
+
+.banner .frase_banner div {
+    padding-top: 230px;
+}
+
+.banner .frase_banner h1 {
+    font-size: 70px;
+    margin: 0%;
+    margin-bottom: 15px;
+}
+
+.banner .frase_banner span {
+    font-weight: 600;
+    font-size: 20px;
+}
+/* END BANNER */
+
+.divisao_banner{
+    height: 50px;
+    background-color: black;
+}
+
+/* INFO */
+.info_site {
+    height: 600px;
+    color: rgb(0, 0, 0);
+    /* border: 1px white solid; */
+    background-color: rgb(182, 181, 181);
+    background-image: url(../img/bannerInfo2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info_box {
+    width: 30%;
+    height: 500px;
+    float: left;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 40px;
+    border-radius: 30px;
+    /* border: 1px rgb(0, 0, 0) solid; */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.info_box img{
+    margin-top: 35px;
+    width: 80%;
+    background-color: rgb(182, 181, 181);
+}
+
+
+.info_box div{
+    height: 200px;
+    width: 90%;
+    padding-top: 20px;
+    margin-left: 20px;
+    color: white;
+    
+    /* float: left; */
+
+    /* border: 1px rgb(0, 0, 0) solid; */
+    text-align: center;
+}
+
+
+.info_box button{
+    height: 40px;
+    width: 150px;
+    margin-top: 30px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px white solid;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    transition: background 0.5s;
+}
+.info_box button:hover{
+    color: black;
+    background-color: white;
+}
+
+/* END INFO */
+
+/* FOOTER */
+.footer {
+    height: 80px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    /* border: 1px white solid; */
+    background-color: black;
+}
+
+.footer h2{
+    margin: 0;
+    padding-top: 30px;
+    font-size: 15px;
+}
+/* END FOOTER */

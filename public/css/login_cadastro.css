@@ -1,0 +1,180 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* NAVBAR */
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+a:hover {
+    font-weight: 900;
+    color: gray;
+}
+
+.navbar {
+    height: 90px;  
+    background-color: black;
+}
+
+.navbar .container div{
+    float: left;
+    margin-top: 10px;
+}
+
+.navbar img {
+    width: 150px;
+}
+
+.navbar ul {
+    float: right;
+}
+
+.navbar li{
+    font-weight: 500;
+    font-size: 20px;
+    float: left;
+    list-style: none;
+    margin-left: 70px;
+    margin-top: 15px;
+    color: rgb(249, 250, 249);
+}
+/* END NAVBAR */
+
+.container {
+    /* height: 100px; */
+    width: 90%;
+    margin: auto;
+}
+
+
+/* LOGIN */
+.formulario {
+    height: 700px;
+    background-image: url(../img/bannerFormulario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #d1d3f8;
+    /* border: 1px red solid; */
+    
+}
+
+.box_login {
+    height: 600px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    color: white;
+    /* border: 1px red solid; */
+    /* float: left; */
+}
+span {
+    font-size: 25px;
+}
+
+.box_login img{
+    width: 170px;
+    margin-left: 12%;
+    
+}
+
+.box_login input{
+    width: 400px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: black;
+    border: 1px black solid;
+    background-color: white;
+}
+
+b {
+    font-size: 13px;
+}
+
+
+.campo_formulario {
+    width: 50%;
+    padding-top: 50px;
+    /* border: 1px red solid; */
+}
+
+.campo_formulario h1{
+    font-size: 50px;
+    /* color: white; */
+}
+
+
+/* END LOGIN */
+
+/* CADASTRO */
+
+
+.cadastro {
+    height: 600px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    color: white;
+    /* border: 1px red solid; */
+}
+
+span{
+    font-size: 25px;
+}
+
+
+.in_form{
+    width: 400px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: black;
+    border: 1px black solid;
+    background-color: white;
+}
+
+
+.btn{
+    height: 40px;
+    width: 150px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px white solid;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+
+/* END CADASTRO */
+/* FOOTER */
+.footer {
+    height: 80px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    /* border: 1px white solid; */
+    background-color: black;
+}
+
+.footer h2{
+    margin: 0px;
+    padding-top: 30px;
+    font-size: 15px;
+}
+/* END FOOTER */
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hero Academia</title>
+    <link rel="stylesheet" href="./css/login_cadastro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="imagem/png" href="./img/logo1.png">
+</head>
+<body>
+<!-- NAVBAR -->
+    <div class="navbar">
+
+        <div class="container">
+
+            <div><a href="./index.html"><img src="./img/logo.png"></a></div>
+
+            <ul>
+                <b>
+                <li><a href="./index.html"><i class="fas fa-home"></i> Home</a> </li>
+                <li> <a href="./sobre.html"><i class="fas fa-book"></i> Sobre</a></li>
+                <li><a href="./meu_cadastro.html"><i class="fas fa-user"></i></i> Cadastro</a></li>
+                <li><i class="fas fa-sign-in-alt"></i> Login</li>
+                </b>
+            </ul>
+
+        </div>
+
+    </div>
+<!-- END NAVBAR -->
+<!-- LOGIN -->
+    <div class="formulario">
+        <div class="container">
+            <div class="box_login">
+                <div class="campo_formulario">
+                    <h1>Login</h1> <br>
+
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+
+                        <span class="text_formulario"> Usuário</span> <br>
+
+                            <input type="text" placeholder="Seu usuário" name="login">
+
+                        <br>
+                        <span class="text_formulario"> Senha</span> <br>
+
+                            <input type="password" placeholder="**********" name="senha">
+
+                        <br>
+                        <b>Ainda não possui cadastro? <a href="./cadastro.html">Faça aqui.</a></b> <br><br>
+
+                        <button id="btn_entrar" class="btn">Entrar</button>
+                    </form>
+                   
+                    <div id="div_msg_erro" style="display: none;"></div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- LOGIN -->
+<!-- FOTTER -->
+    <div class="footer">
+        <div class="container">
+            <h2>Feito por Miguel <i class="fas fa-laugh-beam"></i> &COPY; 2020</h2>
+        </div>
+    </div>
+<!-- END FOTTER -->
+
+</body>
+</html>
+<script>
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.loginUsuario;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'sobre.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;       
+        div_msg_erro.style.visibility = 'none';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        div_msg_erro.style.display = 'block';
+        div_msg_erro.innerHTML = resposta;
+    }
+
+</script>
